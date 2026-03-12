@@ -44,9 +44,9 @@ El Tiempo es una aplicación PHP estructurada en el patrón **Modelo-Vista-Contr
 | Apache | Servidor web |
 | MySQL  | Base de datos |
 | Bootstrap  | Diseño frontend |
-| Chart.js | Gráficas interactivas |
+| Chart.js | Gráficas |
 | Docker y Docker Compose | Contenedores |
-| Nginx + Certbot | Proxy inverso y HTTPS |
+| Nginx + Certbot | Proxy y HTTPS |
 | OpenWeatherMap API | Datos meteorológicos |
 | AWS  | Despliegue en la nube |
 
@@ -57,30 +57,30 @@ El Tiempo es una aplicación PHP estructurada en el patrón **Modelo-Vista-Contr
 ```
 El Tiempo/
 ├── controladores/
-│   ├── ControladorBuscador.php     # Búsqueda de ciudades
-│   ├── ControladorCiudad.php       # Selección de tipo de consulta
-│   ├── ControladorActual.php       # Tiempo actual
-│   ├── ControladorHoras.php        # Previsión por horas
-│   ├── ControladorSemanal.php      # Previsión semanal
-│   └── ControladorHistorial.php    # Historial de consultas
+│   ├── ControladorBuscador.php    
+│   ├── ControladorCiudad.php       
+│   ├── ControladorActual.php     
+│   ├── ControladorHoras.php        
+│   ├── ControladorSemanal.php    
+│   └── ControladorHistorial.php   
 ├── modelos/
-│   ├── Database.php                # Conexión PDO (Singleton)
-│   ├── TiempoAPI.php               # Llamadas a OpenWeatherMap
-│   └── ConsultaDAO.php             # Acceso a datos (patrón DAO)
+│   ├── Database.php              
+│   ├── TiempoAPI.php              
+│   └── ConsultaDAO.php             
 ├── vistas/
-│   ├── buscador.php                # Vista del buscador
-│   ├── ciudad.php                  # Vista de selección
-│   ├── actual.php                  # Vista tiempo actual
-│   ├── horas.php                   # Vista previsión por horas
-│   ├── semanal.php                 # Vista previsión semanal
-│   └── historial.php               # Vista historial
-├── index.php                       # Entrada buscador
-├── ciudad.php                      # Entrada ciudad
-├── actual.php                      # Entrada tiempo actual
-├── horas.php                       # Entrada previsión horas
-├── semanal.php                     # Entrada previsión semanal
-├── historial.php                   # Entrada historial
-├── base_de_datos.sql               # Script de creación de la BD
+│   ├── buscador.php             
+│   ├── ciudad.php                 
+│   ├── actual.php                
+│   ├── horas.php                   
+│   ├── semanal.php                 
+│   └── historial.php             
+├── index.php                     
+├── ciudad.php                     
+├── actual.php                     
+├── horas.php                      
+├── semanal.php                    
+├── historial.php                   
+├── base_de_datos.sql               
 ├── Dockerfile
 └── docker-compose.yml
 ```
@@ -200,19 +200,23 @@ sudo certbot --nginx -d labs-iberotech.ddns.net
 ## 🎬 Comprobación
 
 ### Buscador de ciudades
-![Buscador](Imagenes/index.png)
+![Buscador](Imagenes/Buscador.png)
+
+![Buscador](Imagenes/Buscador_2.png)
+
+![Buscador](Imagenes/Buscador_3.png)
 
 ### Tiempo actual
-![Actual](Imagenes/actual.png)
+![Actual](Imagenes/Actual.png)
 
 ### Previsión por horas
-![Horas](Imagenes/horas.png)
+![Horas](Imagenes/Horas.png)
 
 ### Previsión semanal
-![Semanal](Imagenes/semanal.png)
+![Semanal](Imagenes/Semanal.png)
 
 ### Historial de consultas
-![Historial](Imagenes/historial.png)
+![Historial](Imagenes/Historial.png)
 
 ### Instancia EC2 en AWS
-![AWS](Imagenes/aws.png)
+![AWS](Imagenes/EC2.png)
