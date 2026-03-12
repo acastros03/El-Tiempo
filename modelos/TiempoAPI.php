@@ -1,6 +1,6 @@
 <?php
 class TiempoAPI {
-    private $key = 'AQUI_TU_API_KEY';
+    private $key = 'bb69eee38fb90c2454458033dd8f6839';
 
     public function buscarCiudad($nombre) {
         $url = "http://api.openweathermap.org/geo/1.0/direct?q=" . urlencode($nombre) . "&limit=5&appid={$this->key}";
