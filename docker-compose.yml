@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: el_tiempo
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./base_de_datos.sql:/docker-entrypoint-initdb.d/base_de_datos.sql
