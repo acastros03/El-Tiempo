@@ -1,6 +1,7 @@
 services:
   web:
     build: .
+    restart: always
     ports:
       - "8081:80"
     depends_on:
