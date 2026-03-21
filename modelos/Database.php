@@ -4,7 +4,7 @@ class Database {
 
     public static function getConexion() {
         if (self::$db === null) {
-            $host = getenv('DB_HOST') ?: 'localhost';
+            $host = getenv('DB_HOST') ?: 'db';
             try {
                 self::$db = new PDO("mysql:host=$host;dbname=el_tiempo;charset=utf8", "root", "root");
                 self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
